@@ -1,0 +1,1 @@
+A CRUD app for partner elicitation and notification service for local health departments adn sexual health programs. HTML, CSS, JS, Node, MongoDB. Semantic UI for styling.
