@@ -26,8 +26,38 @@ $(document).ready(function(){
 	$("#otherTest").change(function(){
 		if(this.checked){
 			$("#otherTestReason").removeClass("conditionalDisplay");
-		} else if (!this.checked){
-			$("#otherTestReason").addClass("conditionalDisplay");
 		}
 	});
+
+	//hide text box if not "other"
+	$(".testReason").change(function(){
+		$("#otherTestReason").addClass("conditionalDisplay");
+	});
+
+	//show infection description if checkbox checked
+    $("#otherSymptoms").change(function() {
+    	if(this.checked){
+    		$("#symptomsDescription").removeClass("conditionalDisplay");
+    	} else {
+    		$("#symptomsDescription").addClass("conditionalDisplay");
+    	}
+    });
+
+    //display text box if other reason
+	$("#otherSource").change(function(){
+		if(this.checked){
+			$("#otherReferralSource").removeClass("conditionalDisplay");
+		}
+	});
+
+	//hide text box if not "other"
+	$(".mainSource").change(function(){
+		$("#otherReferralSource").addClass("conditionalDisplay");
+	});
+
+	//display text box for relevant contact method
+	$(".contactPreference").change(function(){
+		$(this).next().toggleClass("conditionalDisplay");
+	});
+
 });
