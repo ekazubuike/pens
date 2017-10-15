@@ -132,6 +132,45 @@
         </div>
         <div class="field">
           <div class="grouped fields">
+            <label for="testedTreated">What sexually transmitted infection(s) (STI) have you been tested and/or treated for?</label>
+            <div class="field">
+              <div class=" ui checkbox">
+                <input type="checkbox" name="infection[syphilis]">
+                <label>Syphilis</label>
+              </div>
+            </div> 
+            <div class="field">
+              <div class=" ui checkbox">
+                <input type="checkbox" name="infection[HIV]">
+                <label>HIV</label>
+              </div>
+            </div> 
+            <div class="field">
+              <div class=" ui checkbox">
+                <input type="checkbox" name="infection[gonorrhea]">
+                <label>Gonorrhea</label>
+              </div>
+            </div> 
+            <div class="field">
+              <div class=" ui checkbox">
+                <input type="checkbox" name="infection[chlamydia]">
+                <label>Chlamydia</label>
+              </div>
+            </div> 
+            <div class="field">
+              <div class=" ui checkbox">
+                <input type="checkbox" name="infection[other]" id="otherInfection">
+                <label>Other</label>
+              </div>
+            </div>
+            <div class="field conditionalDisplay" id="infectionDescription">
+              <label>Describe any other sexually transmitted infection(s) (STI) you have been tested/treated for:
+              <input type="text" name="infection[description]">
+            </div> 
+          </div>
+        </div>
+        <div class="field">
+          <div class="grouped fields">
             <label for="disclosure">Have you told your sexual partners about the infection?</label>
             <div class="field">
               <div class="ui radio checkbox" id="yesDisclosed">
@@ -206,6 +245,51 @@
             <div class="field">
               <input type="text" name="disclosure[year]" placeholder="Year">
             </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grouped fields">
+            <label for="testReason">What was your reason for getting tested?</label>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" value="partner" tabindex="0" class="hidden">
+                <label>A partner told me s/he had a sexually transmitted infection (STI).</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" value="HHD" tabindex="0" class="hidden">
+                <label>The health department called me.</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" value="checkup" tabindex="0" class="hidden">
+                <label>It was part of a routine checkup.</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" value="prenatal" tabindex="0" class="hidden">
+                <label>It was part of my prenatal care.</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" value="familyPlanning" tabindex="0" class="hidden">
+                <label>It was related to family planning.</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="testReason" id="otherTest" value="other" tabindex="0" class="hidden">
+                <label>Other</label>
+              </div>
+            </div>
+            <div class="field conditionalDisplay" id="otherTestReason">
+              <label>List any other reasons for getting tested:
+              <input type="text" name="testReason">
+            </div> 
           </div>
         </div>
       </div>

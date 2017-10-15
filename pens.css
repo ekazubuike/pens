@@ -1,5 +1,5 @@
 .conditionalDisplay {
-	display: none;
+	display: none !important;
 }
 
 .ui.grid.container {
