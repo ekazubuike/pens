@@ -11,485 +11,487 @@
     <title>Houston Partner Elicitation and Notification System</title>
   </head>
   <body>
-    <div class="ui grid container">
-      <div class="ui form">
-        <div class="field">
-          <label>What is your PIN?</label>
-          <input type="number" name="pin" placeholder="Please type your PIN here.">
-        </div>
-        <div class="field">
-          <label>What is your name?</label>
-          <div class="two fields">
+    <div class="ui two column grid container">
+      <div class="centered column">
+          <div class="ui form">
             <div class="field">
-              <input type="text" name="name[first]" placeholder="First">
+              <label>What is your PIN?</label>
+              <input type="number" name="pin" placeholder="Please type your PIN here.">
             </div>
             <div class="field">
-              <input type="text" name="name[last]" placeholder="Last">
+              <label>What is your name?</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="name[first]" placeholder="First">
+                </div>
+                <div class="field">
+                  <input type="text" name="name[last]" placeholder="Last">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>When is your birthday?</label>
+              <div class="three fields">
+                <div class="field">
+                  <select class="ui fluid search dropdown" name="birth[month]">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <select class="ui fluid search dropdown" name="birth[day]">
+                    <option value="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <input type="text" name="birth[year]" placeholder="Year">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="relationshipStatus">What's your relationship status?</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="single" tabindex="0" class="hidden">
+                    <label>Single</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="married" tabindex="0" class="hidden">
+                    <label>Married</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="cohabitating" tabindex="0" class="hidden">
+                    <label>Cohabitating</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="divorced" tabindex="0" class="hidden">
+                    <label>Divorced</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="separated" tabindex="0" class="hidden">
+                    <label>Separated</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="relationshipStatus" value="widowed" tabindex="0" class="hidden">
+                    <label>Widowed</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label>What sexually transmitted infection(s) (STI) have you been tested and/or treated for?</label>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="infection[syphilis]">
+                    <label>Syphilis</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="infection[HIV]">
+                    <label>HIV</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="infection[gonorrhea]">
+                    <label>Gonorrhea</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="infection[chlamydia]">
+                    <label>Chlamydia</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="infection[other]" id="otherInfection">
+                    <label>Other</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay" id="infectionDescription">
+                  <label>Describe any other sexually transmitted infection(s) (STI) you have been tested/treated for:</label>
+                  <input type="text" name="infection[description]">
+                </div> 
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="disclosure">Have you told your sexual partners about the infection?</label>
+                <div class="field">
+                  <div class="ui radio checkbox" id="yesDisclosed">
+                    <input type="radio" name="disclosure[status]" value="yes" tabindex="0" class="hidden">
+                    <label>Yes</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox" id="noDisclosed">
+                    <input type="radio" name="disclosure[status]" value="no" tabindex="0" class="hidden">
+                    <label>No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field conditionalDisplay" id="dateDisclosed">
+              <label>When did you tell your partners about the infection?</label>
+              <div class="three fields">
+                <div class="field">
+                  <select class="ui fluid search dropdown" name="disclosure[month]">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <select class="ui fluid search dropdown" name="disclosure[day]">
+                    <option value="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <input type="text" name="disclosure[year]" placeholder="Year">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="testReason">What was your reason for getting tested?</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" value="partner" tabindex="0" class="hidden testReason">
+                    <label>A partner told me s/he had a sexually transmitted infection (STI).</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" value="HHD" tabindex="0" class="hidden testReason">
+                    <label>The health department called me.</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" value="checkup" tabindex="0" class="hidden testReason">
+                    <label>It was part of a routine checkup.</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" value="prenatal" tabindex="0" class="hidden testReason">
+                    <label>It was part of my prenatal care.</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" value="familyPlanning" tabindex="0" class="hidden testReason">
+                    <label>It was related to family planning.</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="testReason" id="otherTest" value="other" tabindex="0" class="hidden">
+                    <label>Other</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay" id="otherTestReason">
+                  <label>List any other reasons for getting tested:</label>
+                  <input type="text" name="testReason">
+                </div> 
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="symptoms">What symptoms did you have?</label>
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[rash]">
+                    <label>Rash on body/feet/arms (not itchy)</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[spots]">
+                    <label>Spots on hands/soles of feet (not itchy)</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[hairloss]">
+                    <label>Loss of hair</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[mucuous]">
+                    <label>Mucous patches on tongue</label>
+                  </div>
+                </div> 
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[sores]">
+                    <label>Painless sore(s)/lesion(s) in genital area/mouth</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[urination]">
+                    <label>Painful urination</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[discharge]">
+                    <label>Penile/vaginal/anal discharge</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class=" ui checkbox">
+                    <input type="checkbox" name="symptoms[other]" id="otherSymptoms">
+                    <label>Other</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay" id="symptomsDescription">
+                  <label>Describe any other symptom(s) you have experienced:</label>
+                  <input type="text" name="symptoms[description]">
+                </div> 
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="referralSource">Who referred you to this site?</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="referralSource" value="doctor" tabindex="0" class="hidden mainSource">
+                    <label>My doctor</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="referralSource" value="DIS" tabindex="0" class="hidden mainSource">
+                    <label>Health worker/DIS</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="referralSource" value="clinic staff" tabindex="0" class="hidden mainSource">
+                    <label>City of Houston clinic staff</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="referralSource" id="otherSource" value="other" tabindex="0" class="hidden">
+                    <label>Other</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay" id="otherReferralSource">
+                  <label>Name of other referral source:</label>
+                  <input type="text" name="otherReferralSource">
+                </div> 
+              </div>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label for="sexualPartners">How many sexual partners have you had within the past year?</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="50-100" tabindex="0" class="hidden">
+                    <label>50-100+</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="30-49" tabindex="0" class="hidden">
+                    <label>30-49</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="20-29" tabindex="0" class="hidden">
+                    <label>20-29</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="10-19" tabindex="0" class="hidden">
+                    <label>10-19</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="5-9" tabindex="0" class="hidden">
+                    <label>5-9</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="1-4" tabindex="0" class="hidden">
+                    <label>1-4</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="sexualPartners" value="0" tabindex="0" class="hidden">
+                    <label>None</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>How and where did you meet your sexual partners?</label>
+              <textarea name="meetPartners" rows="2"></textarea>
+            </div>
+            <div class="field">
+              <label>Which clubs and/or bathhouses did you visit?</label>
+              <textarea name="clubs" rows="2"></textarea>
+            </div>
+            <div class="field">
+              <label>Which dating websites/apps did you use for hook-ups?</label>
+              <textarea name="hookups" rows="2"></textarea>
+            </div>
+            <div class="field">
+              <label>Is there any additional information we should know about your sexual history?</label>
+              <textarea name="additionalInfo" rows="4"></textarea>
+            </div>
+            <div class="field">
+              <div class="grouped fields">
+                <label>Thank you for completing the form! The next step will be connecting with a healthcare worker. How would you like to be contacted?</label>
+                <div class="field contactPreference">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="contactPreference[email]">
+                    <label>E-mail</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay">
+                  <label>What's your e-mail address?</label>
+                  <input type="text" name="contactInfo[email]">
+                </div>
+                <div class="field contactPreference">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="contactPreference[email]">
+                    <label>Phone call</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay">
+                  <label>What's your phone number?</label>
+                  <input type="number" name="contactInfo[phone]">
+                </div>
+                <div class="field contactPreference">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="contactPreference[email]">
+                    <label>Text</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay">
+                  <label>What's your cellphone number?</label>
+                  <input type="number" name="contactInfo[cellphone]">
+                </div>
+                <div class="field contactPreference">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="contactPreference[email]">
+                    <label>Home visit</label>
+                  </div>
+                </div>
+                <div class="field conditionalDisplay">
+                  <label>What's your home address?</label>
+                  <input type="text" name="contactInfo[homeAddress]">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="field">
-          <label>When is your birthday?</label>
-          <div class="three fields">
-            <div class="field">
-              <select class="ui fluid search dropdown" name="birth[month]">
-                <option value="">Month</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-            </div>
-            <div class="field">
-              <select class="ui fluid search dropdown" name="birth[day]">
-                <option value="">Day</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-              </select>
-            </div>
-            <div class="field">
-              <input type="text" name="birth[year]" placeholder="Year">
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="relationshipStatus">What's your relationship status?</label>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="single" tabindex="0" class="hidden">
-                <label>Single</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="married" tabindex="0" class="hidden">
-                <label>Married</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="cohabitating" tabindex="0" class="hidden">
-                <label>Cohabitating</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="divorced" tabindex="0" class="hidden">
-                <label>Divorced</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="separated" tabindex="0" class="hidden">
-                <label>Separated</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="relationshipStatus" value="widowed" tabindex="0" class="hidden">
-                <label>Widowed</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label>What sexually transmitted infection(s) (STI) have you been tested and/or treated for?</label>
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="infection[syphilis]">
-                <label>Syphilis</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="infection[HIV]">
-                <label>HIV</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="infection[gonorrhea]">
-                <label>Gonorrhea</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="infection[chlamydia]">
-                <label>Chlamydia</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="infection[other]" id="otherInfection">
-                <label>Other</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay" id="infectionDescription">
-              <label>Describe any other sexually transmitted infection(s) (STI) you have been tested/treated for:
-              <input type="text" name="infection[description]">
-            </div> 
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="disclosure">Have you told your sexual partners about the infection?</label>
-            <div class="field">
-              <div class="ui radio checkbox" id="yesDisclosed">
-                <input type="radio" name="disclosure[status]" value="yes" tabindex="0" class="hidden">
-                <label>Yes</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox" id="noDisclosed">
-                <input type="radio" name="disclosure[status]" value="no" tabindex="0" class="hidden">
-                <label>No</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field conditionalDisplay" id="dateDisclosed">
-          <label>When did you tell your partners about the infection?</label>
-          <div class="three fields">
-            <div class="field">
-              <select class="ui fluid search dropdown" name="disclosure[month]">
-                <option value="">Month</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-            </div>
-            <div class="field">
-              <select class="ui fluid search dropdown" name="disclosure[day]">
-                <option value="">Day</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-              </select>
-            </div>
-            <div class="field">
-              <input type="text" name="disclosure[year]" placeholder="Year">
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="testReason">What was your reason for getting tested?</label>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" value="partner" tabindex="0" class="hidden testReason">
-                <label>A partner told me s/he had a sexually transmitted infection (STI).</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" value="HHD" tabindex="0" class="hidden testReason">
-                <label>The health department called me.</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" value="checkup" tabindex="0" class="hidden testReason">
-                <label>It was part of a routine checkup.</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" value="prenatal" tabindex="0" class="hidden testReason">
-                <label>It was part of my prenatal care.</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" value="familyPlanning" tabindex="0" class="hidden testReason">
-                <label>It was related to family planning.</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="testReason" id="otherTest" value="other" tabindex="0" class="hidden">
-                <label>Other</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay" id="otherTestReason">
-              <label>List any other reasons for getting tested:</label>
-              <input type="text" name="testReason">
-            </div> 
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="symptoms">What symptoms did you have?</label>
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[rash]">
-                <label>Rash on body/feet/arms (not itchy)</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[spots]">
-                <label>Spots on hands/soles of feet (not itchy)</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[hairloss]">
-                <label>Loss of hair</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[mucuous]">
-                <label>Mucous patches on tongue</label>
-              </div>
-            </div> 
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[sores]">
-                <label>Painless sore(s)/lesion(s) in genital area/mouth</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[urination]">
-                <label>Painful urination</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[discharge]">
-                <label>Penile/vaginal/anal discharge</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class=" ui checkbox">
-                <input type="checkbox" name="symptoms[other]" id="otherSymptoms">
-                <label>Other</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay" id="symptomsDescription">
-              <label>Describe any other symptom(s) you have experienced:
-              <input type="text" name="symptoms[description]">
-            </div> 
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="referralSource">Who referred you to this site?</label>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="referralSource" value="doctor" tabindex="0" class="hidden mainSource">
-                <label>My doctor</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="referralSource" value="DIS" tabindex="0" class="hidden mainSource">
-                <label>Health worker/DIS</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="referralSource" value="clinic staff" tabindex="0" class="hidden mainSource">
-                <label>City of Houston clinic staff</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="referralSource" id="otherSource" value="other" tabindex="0" class="hidden">
-                <label>Other</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay" id="otherReferralSource">
-              <label>Name of other referral source:</label>
-              <input type="text" name="otherReferralSource">
-            </div> 
-          </div>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label for="sexualPartners">How many sexual partners have you had within the past year?</label>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="50-100" tabindex="0" class="hidden">
-                <label>50-100+</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="30-49" tabindex="0" class="hidden">
-                <label>30-49</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="20-29" tabindex="0" class="hidden">
-                <label>20-29</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="10-19" tabindex="0" class="hidden">
-                <label>10-19</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="5-9" tabindex="0" class="hidden">
-                <label>5-9</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="1-4" tabindex="0" class="hidden">
-                <label>1-4</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="sexualPartners" value="0" tabindex="0" class="hidden">
-                <label>None</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>How and where did you meet your sexual partners?</label>
-          <textarea name="meetPartners" rows="2"></textarea>
-        </div>
-        <div class="field">
-          <label>Which clubs and/or bathhouses did you visit?</label>
-          <textarea name="clubs" rows="2"></textarea>
-        </div>
-        <div class="field">
-          <label>Which dating websites/apps did you use for hook-ups?</label>
-          <textarea name="hookups" rows="2"></textarea>
-        </div>
-        <div class="field">
-          <label>Is there any additional information we should know about your sexual history?</label>
-          <textarea name="additionalInfo" rows="4"></textarea>
-        </div>
-        <div class="field">
-          <div class="grouped fields">
-            <label>Thank you for completing the form! The next step will be connecting with a healthcare worker. How would you like to be contacted?</label>
-            <div class="field contactPreference">
-              <div class="ui checkbox">
-                <input type="checkbox" name="contactPreference[email]">
-                <label>E-mail</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay">
-              <label>What's your e-mail address?</label>
-              <input type="text" name="contactInfo[email]">
-            </div>
-            <div class="field contactPreference">
-              <div class="ui checkbox">
-                <input type="checkbox" name="contactPreference[email]">
-                <label>Phone call</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay">
-              <label>What's your phone number?</label>
-              <input type="number" name="contactInfo[phone]">
-            </div>
-            <div class="field contactPreference">
-              <div class="ui checkbox">
-                <input type="checkbox" name="contactPreference[email]">
-                <label>Text</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay">
-              <label>What's your cellphone number?</label>
-              <input type="number" name="contactInfo[cellphone]">
-            </div>
-            <div class="field contactPreference">
-              <div class="ui checkbox">
-                <input type="checkbox" name="contactPreference[email]">
-                <label>Home visit</label>
-              </div>
-            </div>
-            <div class="field conditionalDisplay">
-              <label>What's your home address?</label>
-              <input type="text" name="contactInfo[homeAddress]">
-            </div>
-          </div>
-        </div>
       </div>
     </div>
       
